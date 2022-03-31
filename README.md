@@ -1,7 +1,7 @@
 # Model transformation rules repository
 
 This repository contains a collection of generic, encoding-agnostic 
-model transformation rules that can be applied to the 
+[model transformation rules](/rules) that can be applied to the 
 [INSPIRE data models](https://inspire.ec.europa.eu/Data-Models/Data-Specifications/2892).
 By applying those rules, a modified UML data model, that is more fit for 
 certain use cases – such as basic data exchange and direct visualisation
