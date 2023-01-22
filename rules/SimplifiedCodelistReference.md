@@ -1,8 +1,8 @@
-# Simplified Codelist Reference
+# Simplified Codelist Reference (MT008)
 
 ## Category
 
-Alternate Structures for specific types or type hierarchies
+substitution rule
 
 ## Description
 
@@ -114,7 +114,7 @@ register to the property whose name is `property`;
 - Copy the value of the `vocabulary` tagged value to the property whose 
 name is `property` + `.href`.
   
-## Solves usability issues
+## Solved usability issues
 
 The transformed data structure can easily be edited, filtered and symbolized in desktop GIS and web GIS software.
 
@@ -122,6 +122,10 @@ The transformed data structure can easily be edited, filtered and symbolized in 
 
 None.
 
-## INSPIRE Compliance
+## INSPIRE compliance conditions and reversibility
 
 Fully compliant.
+
+## Notes
+
+N/A

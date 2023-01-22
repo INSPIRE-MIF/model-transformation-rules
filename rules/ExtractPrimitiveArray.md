@@ -1,10 +1,8 @@
-# Name
-
-Extract Primitive Array
+# Extract Primitive Array (MT002)
 
 ## Category
 
-...
+simplification rule
 
 ## Description
 
@@ -16,8 +14,7 @@ complex property and then create an array of those simple values. An
 example where this can be applied is to store relationships between
 objects:
 
-- lowerLevelUnits: LinktoToUnit_01, LinktoToUnit_02, LinktoToUnit_03,
-  ...
+- lowerLevelUnits: LinktoToUnit_01, LinktoToUnit_02, LinktoToUnit_03, …
 
 
 ## Original model
@@ -95,7 +92,7 @@ For each instance of the `valueProperty`, push its value to the array in
 the target property. The order of values that are copied from the source
 properties should be kept.
 
-## Solves usability issues
+## Solved usability issues
 
 This rule reduces overhead and makes it possible to have workable 
 transformed data structures that are not polluted by hundreds or even 
@@ -106,7 +103,11 @@ simplification in case the target environment does not support arrays.
 
 Some software cannot process arrays.
 
-## INSPIRE Compliance
+## INSPIRE compliance conditions and reversibility
 
 The transformed model is fully compliant to INSPIRE as long as no 
 mandatory properties other than the valueProperty have been left out.
+
+## Notes
+
+N/A

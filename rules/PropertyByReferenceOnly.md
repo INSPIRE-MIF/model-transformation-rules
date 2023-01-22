@@ -1,8 +1,8 @@
-# Restriction of property encoding options to only by-reference
+# Refer to Property Values by Reference (MT006)
 
 ## Category
 
-General model simplification rules
+simplification rule
 
 ## Description
 
@@ -167,7 +167,7 @@ full-blown bibliographic reference in the case of objects that are
 information resources (e.g. "Bekendtgørelse af lov om skove. 28 marts
 2019. LBK nr 315."), if present, may be inserted in `@xlink:title`.
 
-## Solves usability issues
+## Solved usability issues
 
 This rule reduces nested structures (inline referencing causes nested structures with many levels). It also reduces implementation effort of and duplication of data by data providers, if the value of the property is a resource managed by another data provider.
 
@@ -177,7 +177,10 @@ Display of `@xlink:href` and `@xlink:title` may not be supported in all
 clients. However, this is the same problem as for code lists, which are
 widely used in INSPIRE.
 
-## INSPIRE Compliance
+## INSPIRE compliance conditions and reversibility
 
 Fully compliant if the referenced resource is stored in an external register or non-INSPIRE online application.
 
+## Notes
+
+N/A

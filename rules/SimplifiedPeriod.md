@@ -1,8 +1,8 @@
-# Simplified Period
+# Simplified Period (MT009)
 
 ## Category
 
-Alternate Structures for specific types or type hierarchies
+substitution rule
 
 ## Description
 
@@ -116,7 +116,7 @@ N/A
 - Copy the value of the nested `endPosition` property to property 
 `endPosition`.
 
-## Solves usability issues
+## Solved usability issues
 
 The transformed data structure can easily be edited, filtered and symbolized in desktop GIS and web GIS software. This transformation also reduces data volume in datasets.
 
@@ -124,6 +124,10 @@ The transformed data structure can easily be edited, filtered and symbolized in 
 
 None.
 
-## INSPIRE Compliance
+## INSPIRE compliance conditions and reversibility
 
 This rule works only with one external link, and it removed finer grained information about dates. It can be combined with the [Property Composition to Association](./PropertyByReferenceOnly.md) rule to add more information from an external register.
+
+## Notes
+
+N/A

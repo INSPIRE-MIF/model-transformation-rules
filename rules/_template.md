@@ -42,14 +42,14 @@
 
 
 
-## Solves usability issues
+## Solved usability issues
 
 
 
 ## Known usability issues
 
 
-## INSPIRE Compliance
+## INSPIRE compliance conditions and reversibility
 
 
 ## Notes

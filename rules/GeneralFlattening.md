@@ -1,8 +1,8 @@
-# General Flattening
+# Flattening of Nested Structures (MT001)
 
 ## Category
 
-General model simplification rules
+simplification rule
 
 ## Description
 
@@ -126,7 +126,7 @@ None.
 
 As described above, this rule does not handle property cardinalities greater than 1; if more than one instance of a property occurs, only the first instance will be kept.
 
-## Solves usability issues
+## Solved usability issues
 
 This rule deals with most nested property structures and flattens them, so that the data can be used easily in analysis and visualisation.
 
@@ -134,7 +134,7 @@ This rule deals with most nested property structures and flattens them, so that 
 
 This rule has no fixed limit in the character length of the resulting property names. Some of these names can get very long. The rule should thus be combined with others that reduce the likelyhood of that happening, such as [SimpleGeographicName](./SimpleGeographicName.html).
 
-## INSPIRE Compliance
+## INSPIRE compliance conditions and reversibility
 
 Data transformed using this rule is INSPIRE compliant as long as the cardinality of the affected properties in the source data was 0 or 1.
 

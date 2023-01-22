@@ -1,8 +1,8 @@
-# Simplified Geographic Name
+# Simplified Geographic Name (MT005)
 
 ## Category
 
-Alternate Structures for specific types or type hierarchies
+substitution rule
 
 ## Description
 
@@ -165,7 +165,7 @@ N/A
 
 Copy the value of the `spelling.text` property to the new property.
 
-## Solves usability issues
+## Solved usability issues
 
 The transformed data structure can easily be edited, filtered and symbolized in desktop GIS and web GIS software. This transformation also reduces data volume significantly in datasets that use in-place encoding of `GeographicalName`.
 
@@ -173,7 +173,7 @@ The transformed data structure can easily be edited, filtered and symbolized in 
 
 None.
 
-## INSPIRE Compliance
+## INSPIRE compliance conditions and reversibility
 
 This rule discards individual metadata about geographical names, such as the name status and its nativeness. If this information is homogeneous, it should be documented in the dataset metadata. If it is heterogeneous, this transformation will result in a loss of information.
 

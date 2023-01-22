@@ -1,8 +1,8 @@
-# Simplified Citation
+# Simplified Citation (MT007)
 
 ## Category
 
-Alternate structures for specific types or type hierarchies
+substitution rule
 
 ## Description
 
@@ -162,7 +162,7 @@ N/A
   Note that only one link may be present in the data.
 - Copy the value of `base2:level` to the property `simple:level`.
 
-## Solves usability issues
+## Solved usability issues
 
 The transformed data structure can easily be edited, filtered and 
 symbolized in desktop GIS and web GIS software. This transformation also
@@ -172,9 +172,13 @@ symbolized in desktop GIS and web GIS software. This transformation also
 
 None.
 
-## INSPIRE Compliance
+## INSPIRE compliance conditions and reversibility
 
 This rule works only with one external link, and it removes finer 
 grained information about dates. It can be combined with the 
 [Restriction of property encoding options to only by-reference](./PropertyByReferenceOnly.md) rule to add more information from an 
 external register.
+
+## Notes
+
+N/A

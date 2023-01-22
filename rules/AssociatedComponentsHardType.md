@@ -1,8 +1,8 @@
-# Inline associated or aggregated components using type names
+# Flatten Associated Components using Typenames (MT003)
 
 ## Category
 
-General model simplification rules
+simplification rule
 
 ## Description
 
@@ -176,7 +176,7 @@ None.
 
 For each potential type of a value, a property is created, so instance values can be copied. Properties that are left empty after copying the source values can be removed (see example above).
 
-## Solves usability issues
+## Solved usability issues
 
 Data where key properties are in associated objects is hard to style and to filter for in most desktop GIS and web GIS software. The inlined data can be processed much easier by many tools, e.g. it can be converted to Excel easily.
 
@@ -184,6 +184,10 @@ Data where key properties are in associated objects is hard to style and to filt
 
 Since this rule denormalizes components, it can increase total data volume.
 
-## INSPIRE Compliance
+## INSPIRE compliance conditions and reversibility
 
 This rule can only be applied if there is at maximum one occurrence of each type in a set of properties, i.e. where the components are a key-value map with the keys being defined by the type names.
+
+## Notes
+
+N/A
