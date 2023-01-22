@@ -1,8 +1,8 @@
-# Flatten aggregated or associated components using codelist values
+# Flatten Associated Components using Codelist Values (MT004)
 
 ## Category
 
-General model simplification rules
+simplification rule
 
 ## Description
 
@@ -126,7 +126,7 @@ Copy the value of the `valueProperty` to the newly created property. If
 the `valueProperty` is still a complex property, it might have to be
 transformed using a different rule in addition.
 
-## Solves usability issues
+## Solved usability issues
 
 The flattened data can be filtered and symbolized easily in desktop GIS and web GIS software. The flattened data can be processed much easier by many tools, e.g. it can be converted to excel easily.
 
@@ -134,6 +134,10 @@ The flattened data can be filtered and symbolized easily in desktop GIS and web 
 
 Flattening of large arrays will lead to a very large number of properties on the first level. Some software and formats can only work with a limited number of properties on a layer (ArcMap has 65.534, Shapefile is limited to 250), so this can limit usability in extreme cases. Some software also has limits on the length of property names (File Geodatabase = 64 characters, Shapefile = 10 characters).
 
-## INSPIRE Compliance
+## INSPIRE compliance conditions and reversibility
 
 This rule can only be applied if there is at maximum one occurrence of each codelist value for the type property in a set of properties.
+
+## Notes
+
+N/A

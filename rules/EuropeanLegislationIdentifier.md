@@ -1,10 +1,8 @@
-# Name
-
-European Legislation Identifier
+# European Legislation Identifier (MT010)
 
 ## Category
 
-Alternative structures for specific types or type hierarchies
+substitution rule
 
 ## Description
 
@@ -101,7 +99,7 @@ N/A
 Give the property that has `LegalResource` as type the ELI of the legal 
 resource as value.
 
-## Solves usability issues
+## Solved usability issues
 
 Reduces implementation effort of and duplication of data by data 
 providers, as legal resources usually are managed by another data 
@@ -113,7 +111,11 @@ Display of `@xlink:href` may not be supported in all
 clients. However, this is the same problem as for code lists, which are
 widely used in INSPIRE.
 
-## INSPIRE Compliance
+## INSPIRE compliance conditions and reversibility
 
 Fully compliant if the referenced resource is stored in an external 
 register or non-INSPIRE online application.
+
+## Notes
+
+N/A
