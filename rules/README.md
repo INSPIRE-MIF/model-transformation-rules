@@ -47,7 +47,7 @@ types are replaced with less complex types.
 
 | Identifier | Name | Category |
 |---|---|---|
-| MT001 | [Flattening of Nested Structures](./GeneralFlattening.md) |simplification rule |
+| MT001 | [Flatten Nested Structures](./FlattenNestedStructures.md) |simplification rule |
 | MT002 | [Extract Primitive Arrays](./ExtractPrimitiveArray.md) |simplification rule |
 | MT003 | [Flatten Associated Components using Typenames](./AssociatedComponentsHardType.md) |simplification rule |
 | MT004 | [Flatten Associated Components using Codelist Values](./AssociatedComponentsSoftType.md) |simplification rule |
