@@ -1,4 +1,4 @@
-# Flattening of Nested Structures (MT001)
+# Flatten Nested Structures (MT001)
 
 ## Category
 
@@ -6,14 +6,37 @@ simplification rule
 
 ## Description
 
-The complex structure of model elements can be reduced by applying a flattening method. The principle of the flattening is to derive a flat model structure by moving the nested child elements to its parent. The elements can be renamed to represent the former element path in the name of the resulting element and to avoid naming conflicts. The multiplicity of the derived elements should be calculated from the multiplicities of the former element path. When applied recursively, this method flattens the structure of multiple levels.
+The complex structure of model elements can be reduced by applying a 
+flattening method. The principle of the flattening is to derive a flat 
+model structure in the parent level by moving the first instance of 
+nested child elements to its parent. The child element so moved to the 
+parent can be renamed to represent the former (child) element path as a 
+prefix in the name of the resulting element and to avoid naming 
+conflicts.
 
-When applied recursively, this method flattens the structure of multiple levels and will result in properties such as these:
+When applied recursively, this method flattens the structure of multiple
+ levels into the parent level and will result in properties such as 
+these:
 
 - `inspireId_namespace`
 - `name_spelling_text`
 
-This model transformation rule does not handle multiplicities greater than 1; it thus does not introduce any numeric elements into the new property name to account for multiple occurrences. It also does not make use of the element names as they would be encoded in XML to keep the resulting property names shorter. In most cases outside the use of substitution groups, this does not lead to issues. These should be resolved using any of the three Transformation Rules that can deal with that ([Primitive Array](./ExtractPrimitiveArray.md), [Associations to Soft Typed properties](./AssociatedComponentsSoftType.md), [Associations to Hard Typed properties](./AssociatedComponentsHardType.md)).
+This model transformation rule does not handle multiplicities greater 
+than 1, i.e., it does not introduce multiple occurrences of child 
+elements into the parent level; it thus does not introduce any numeric 
+elements into the new property names. It also does not make use of the 
+element names as they would be encoded in XML to keep the resulting 
+property names shorter. In most cases outside the use of substitution 
+groups, this does not lead to issues in property name length. Where 
+issues do exist, they should be resolved using any of the following 
+model transformation rules:
+
+- [MT002 Extract Primitive Arrays](./ExtractPrimitiveArray.md)
+- [MT003 Flatten Associated Components using Typenames](./AssociatedComponentsHardType.md)
+- [MT004 Flatten Associated Components using Codelist Values](./AssociatedComponentsSoftType.md)
+
+This model transformation rule does not retain additional occurrences 
+that may exist in child elements.
 
 ## Original model
 
@@ -114,7 +137,14 @@ classDiagram
 
 ### Execution
 
-Recursively go down through the complex structure of the property and concatenate the local name of the property, using the `separator` character in between each local name. This rule will drop inherited properties that have the same local name as a property declared on the feature type or property type itself, e.g. `gml:name` vs. `gn:name`. Note that Geometry properties are excluded from this rule!</p>
+Recursively go down through the complex structure of the property and 
+concatenate the local name of the property, using the `separator` 
+character in between each local name.
+
+This rule will drop inherited properties that have the same local name 
+or same local name prefix as a property declared on the feature type or 
+property type itself, e.g. `gml:name` vs. `gn:name`. Note that geometry 
+properties are excluded from this rule.
 
 ## Instance transformation rule
 
@@ -124,19 +154,34 @@ None.
 
 ### Execution
 
-As described above, this rule does not handle property cardinalities greater than 1; if more than one instance of a property occurs, only the first instance will be kept.
+As described above, this rule does not handle property occurrences 
+greater than 1; if more than one instance of a property occurs, only the
+ first instance will be kept in the parent.
 
 ## Solved usability issues
 
-This rule deals with most nested property structures and flattens them, so that the data can be used easily in analysis and visualisation.
+This rule deals with most nested property structures and flattens them 
+into the parent structure, so that the data can be used easily in 
+analysis and visualisation.
 
 ## Known usability issues
 
-This rule has no fixed limit in the character length of the resulting property names. Some of these names can get very long. The rule should thus be combined with others that reduce the likelyhood of that happening, such as [SimpleGeographicName](./SimpleGeographicName.html).
+This rule may result in information loss where there are multiple 
+occurrences in the child structure. The rule may be combined with others
+ that reduce the likelihood of information loss.
+
+This rule has no fixed limit in the character length of the resulting 
+property names. Some of these names can get very long. The rule should 
+thus be combined with others that reduce the likelyhood of that 
+happening, such as [SimpleGeographicName](./SimpleGeographicName.html).
 
 ## INSPIRE compliance conditions and reversibility
 
-Data transformed using this rule is INSPIRE compliant as long as the cardinality of the affected properties in the source data was 0 or 1.
+Data transformed using this rule is INSPIRE compliant as long as there 
+is no information loss from the source data. This can be achieved when 
+either the cardinality of the source data is 0..1 for all affected 
+properties or when additional rules are applied to retain additional 
+child elements.
 
 ## Notes
 
